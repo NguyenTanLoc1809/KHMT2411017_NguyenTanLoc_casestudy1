@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+
+    <!-- Lớp màu xanh lá cây (tiền nhô ra) - nằm sau -->
+    <path
+        android:fillColor="#A3D9A3"
+        android:pathData="M17,5H7C6.45,5 6,5.45 6,6v2h12V6C18,5.45 17.55,5 17,5z"/>
+
+    <!-- Lớp ví chính màu xanh dương - nằm trước -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M19,8H5C4.45,8 4,8.45 4,9v8c0,0.55 0.45,1 1,1h14c0.55,0 1,-0.45 1,-1V9C20,8.45 19.55,8 19,8z"/>
+
+    <!-- Phần nắp ví/dây đeo màu xanh dương đậm hơn ở bên phải -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M15,11h5c0.55,0 1,0.45 1,1v2c0,0.55 -0.45,1 -1,1h-5c-0.55,0 -1,-0.45 -1,-1v-2C14,11.45 14.45,11 15,11z"/>
+
+    <!-- Điểm tròn màu trắng trên nắp ví -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M17.5,13m-0.5,0a0.5,0.5 0,1 1,1 0a0.5,0.5 0,1 1,-1 0"/>
+
+</vector>
