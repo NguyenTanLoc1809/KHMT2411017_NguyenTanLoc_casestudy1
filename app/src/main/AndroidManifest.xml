@@ -7,10 +7,12 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="KHMT2411017_NguyenTanLoc"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KHMT2411017_NguyenTanLoc">
+
+        <!-- Màn hình chào mừng (Khởi chạy chính) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -21,6 +23,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Màn hình Tổng quan Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Màn hình Thêm Giao dịch -->
+        <activity
+            android:name=".AddTransactionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TransactionAdapter"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
