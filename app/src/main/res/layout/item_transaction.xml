@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginBottom="8dp"
     android:background="#FFFFFF"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
 
+    <!-- Icon danh mục hình tròn đổi màu -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardIconBg"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:cardBackgroundColor="#F97316"
+        app:cardCornerRadius="21dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_menu_compass"
+            app:tint="#FFFFFF" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tên giao dịch & Danh mục -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -19,9 +39,35 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên giao dịch"
+            android:text="Ăn trưa"
             android:textColor="#0F172A"
-            android:textSize="16sp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Ăn uống"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Số tiền & Ngày -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-50.000 đ"
+            android:textColor="#DC2626"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -29,17 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Ngày"
-            android:textColor="#64748B"
+            android:text="03/09/2024"
+            android:textColor="#94A3B8"
             android:textSize="12sp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0 đ"
-        android:textSize="16sp"
-        android:textStyle="bold" />
 
 </LinearLayout>

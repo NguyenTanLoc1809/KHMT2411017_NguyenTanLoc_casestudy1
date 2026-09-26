@@ -26,7 +26,6 @@ class DashboardActivity : AppCompatActivity() {
         tvExpense = findViewById(R.id.tvExpense)
         rvTransactions = findViewById(R.id.rvTransactions)
 
-        // Cài đặt dạng danh sách cuộn dọc
         rvTransactions.layoutManager = LinearLayoutManager(this)
 
         val fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd)
@@ -48,10 +47,9 @@ class DashboardActivity : AppCompatActivity() {
         val totalExpense = TransactionRepository.getTotalExpense()
 
         tvTotalBalance.text = "${formatter.format(totalBalance)} đ"
-        tvIncome.text = "+${formatter.format(totalIncome)} đ"
-        tvExpense.text = "-${formatter.format(totalExpense)} đ"
+        tvIncome.text = "${formatter.format(totalIncome)} đ"
+        tvExpense.text = "${formatter.format(totalExpense)} đ"
 
-        // Nạp danh sách giao dịch mới nhất ra màn hình
         rvTransactions.adapter = TransactionAdapter(TransactionRepository.list)
     }
 }

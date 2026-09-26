@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import java.text.DecimalFormat
 
@@ -13,8 +14,10 @@ class TransactionAdapter(private val list: List<Transaction>) :
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
+        val tvCategory: TextView = itemView.findViewById(R.id.tvCategory)
         val tvDate: TextView = itemView.findViewById(R.id.tvDate)
         val tvAmount: TextView = itemView.findViewById(R.id.tvAmount)
+        val cardIconBg: CardView = itemView.findViewById(R.id.cardIconBg)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,15 +31,28 @@ class TransactionAdapter(private val list: List<Transaction>) :
         val formatter = DecimalFormat("#,###")
 
         holder.tvTitle.text = item.title
+        holder.tvCategory.text = item.category
         holder.tvDate.text = item.date
 
         if (item.isExpense) {
             holder.tvAmount.text = "-${formatter.format(item.amount)} đ"
-            holder.tvAmount.setTextColor(Color.parseColor("#F87171")) // Màu đỏ cho Chi tiêu
+            holder.tvAmount.setTextColor(Color.parseColor("#DC2626"))
         } else {
             holder.tvAmount.text = "+${formatter.format(item.amount)} đ"
-            holder.tvAmount.setTextColor(Color.parseColor("#4ADE80")) // Màu xanh cho Thu nhập
+            holder.tvAmount.setTextColor(Color.parseColor("#16A34A"))
         }
+
+        // Đổi màu nền icon tròn theo danh mục
+        val bgHex = when (item.category) {
+            "Ăn uống" -> "#F97316"   // Cam
+            "Di chuyển" -> "#0284C7"  // Xanh dương
+            "Thu nhập" -> "#16A34A"   // Xanh lá
+            "Tiền lương" -> "#16A34A"
+            "Mua sắm" -> "#A855F7"   // Tím
+            "Giáo dục" -> "#0D9488"  // Xanh ngọc
+            else -> "#64748B"
+        }
+        holder.cardIconBg.setCardBackgroundColor(Color.parseColor(bgHex))
     }
 
     override fun getItemCount(): Int = list.size
