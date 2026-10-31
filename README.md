@@ -47,7 +47,6 @@ app/src/main/java/com/example/khmt2411017_nguyentanloc/
 docs/database-design.md          Thiết kế CSDL (sơ đồ, SQL, dữ liệu mẫu)
 ```
 
-Thiết kế CSDL xem tại [`docs/database-design.md`](docs/database-design.md).
 
 ## Cách chạy
 
@@ -58,10 +57,4 @@ Thiết kế CSDL xem tại [`docs/database-design.md`](docs/database-design.md)
 Chạy kiểm thử: `Run > Run Tests` (unit test) hoặc chạy `DatabaseHelperTest` trong `androidTest` để kiểm tra
 thêm/sửa/xóa/tính tổng của SQLite.
 
-## Ảnh chụp màn hình
 
-Thêm ảnh chụp vào thư mục `docs/screenshots/` rồi gắn vào đây:
-
-| Chào | Dashboard | Thêm giao dịch | Sửa giao dịch | Tất cả giao dịch |
-|---|---|---|---|---|
-| _(ảnh)_ | _(ảnh)_ | _(ảnh)_ | _(ảnh)_ | _(ảnh)_ |
