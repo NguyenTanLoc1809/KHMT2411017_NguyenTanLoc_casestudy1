@@ -1,12 +1,12 @@
-# Expense Manager – Quản lý thu chi (Buổi 8 – Bản hoàn thiện)
+# Expense Manager – Quản lý thu chi
 
 **Sinh viên:** Nguyễn Tấn Lộc – **MSSV:** KHMT2411017
 **Môn:** Lập trình thiết bị di động – **Case study 1:** Ứng dụng quản lý thu chi cá nhân
 **Công nghệ:** Android (Kotlin), giao diện XML, SQLite (`SQLiteOpenHelper`)
 
-## Nội dung Buổi 8: Hoàn thiện ứng dụng
+## Nội dung: Hoàn thiện ứng dụng
 
-Buổi này gom mọi chức năng từ Buổi 5–7 và hoàn thiện những phần còn thiếu để app dùng được như sản phẩm thật.
+Buổi này gom mọi chức năng từ 1 và hoàn thiện những phần còn thiếu để app dùng được như sản phẩm thật.
 
 ### Toàn bộ chức năng của ứng dụng
 
